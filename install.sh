@@ -1,5 +1,4 @@
-#!/bin/bash
-function appExits () {
+function appExist () {
     type "$1" &> /dev/null ;
 }
 
@@ -10,7 +9,7 @@ function downloadNecessaryFiles () {
     curl -o /usr/bin/vag 'https://raw.githubusercontent.com/nerdial/Vagabond/master/vag.sh'
 }
 
-if appExits curl ; then
+if appExist curl ; then
     downloadNecessaryFiles
 else
     echo "Curl command is not installed yet.make sure you have installed it properly."

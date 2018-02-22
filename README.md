@@ -1,2 +1,14 @@
 # Vagabond
+
+![alt text][logo]
+
 Simple But Powerful WebServer Maker For PHP Projects
+
+
+## Simple Example
+```sh
+$ vag -h localhost -p 8000  
+```
+
+
+[logo]: https://lh3.googleusercontent.com/nUbW5fJ1L46g6PbMAiy_rYczDkak8bF84FdP4LMk6LkOLS0yFmrUdhhJtEImMAUDWdDKz8oKRUeOVWAihX30LmDHOSkLgTbdzaqZYmpEAQyWOLmI5pwXaiimIeOEI1_5xUtNA9KcicG2ouSShBHcaboYF_DWfjSc5Rsu1Ee6ZLLu2jdAneVtuEh-pjqZwKxoC4j_Npq_UfqlGBnCIx0TxJGui7Lqkf_DHhJL5JmqxXXL1i-mPIvlIDGAqtJsMXHF7Ht6SlXG1ftn5HrVP4D5x1IHY8yHZBOAan-3SjZJz9HBpRZFoNXoDfrk7qm2BO1rsW5u8kKaHAOdF_tmSjQxd0sl2_cU11wi06A9ZkIcmHWEbepyhhLFmIW8IChGqCAhfdxjo2weDhUTQ1rJQlA3-SW51VPBq7vJWUEpU7Zso6Kp2sPAdY7s0J-MtOWVRbKiEBRsLnIwj-JVjTYsMeVaHgeCaDWC35__rlxm2DgOrvNDhPURtYoEMJb7NYDrX3IIiGnDVvAZM0_UJuW3Dj2ciu6SrkpFD5D14kvuP7f2GcuyLZNPpSeR44dU_iQjBl3SnZ64ENdGVJGKjGH7lQRoUr_S-jz1l_L4XBhrbFo=w368-h347-no "Vagabond"

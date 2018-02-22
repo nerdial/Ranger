@@ -1,4 +1,4 @@
-# Vagabond (Undey Heavy Development)
+# Vagabond (Under Heavy Development)
 
 ![Vagabond Image][logo]
 

@@ -1,4 +1,4 @@
-# Vagabond
+# Vagabond (Undey Heavy Development)
 
 ![Vagabond Image][logo]
 
@@ -19,7 +19,9 @@ $ vag
 ```sh
 $ vag -h localhost -p 9000  
 ```
-
+```sh
+$ vag -p 9000  
+```
 
 ## Installation
 

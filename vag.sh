@@ -7,7 +7,7 @@ function portIsNumber () {
         return 1
     fi
 }
-function appExits () {
+function appExist () {
     type "$1" &> /dev/null ;
 }
 
@@ -39,13 +39,13 @@ else
     port=$2 
 fi
 
-if appExits nginx ; then
+if appExist nginx ; then
     echo "nginx is installed"
 else
     installNginx    
 fi
 
-if appExits php-fpm7.2 ; then
+if appExist php-fpm7.2 ; then
     echo "php-fpm is installed"
 else
     installPHP    

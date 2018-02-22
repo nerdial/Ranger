@@ -2,12 +2,36 @@
 
 ![Vagabond Image][logo]
 
+[logo]: https://img2.picload.org/image/dadldcwa/vagabond.jpg "Vagabond"
+
 Simple But Powerful WebServer Maker For PHP Projects
 
 
 ## Simple Example
 ```sh
-$ vag -h localhost -p 8000  
+$ vag   
 ```
 
-[logo]: https://img2.picload.org/image/dadldcwa/vagabond.jpg "Vagabond"
+#### it will boots up nginx and php-fpm on default localhost:8000/ based on current directory
+
+
+## Other Examples
+```sh
+$ vag -h localhost -p 9000  
+```
+
+
+## Installation
+
+### Through Wget
+
+```sh
+$ sh -c "$(wget https://raw.githubusercontent.com/nerdial/Vagabond/master/install.sh -O -)" 
+```
+
+### Through Curl
+
+```sh
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/nerdial/Vagabond/master/install.sh)"  
+```
+

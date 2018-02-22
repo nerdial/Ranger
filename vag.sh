@@ -59,7 +59,7 @@ applicationPort='{applicationPort}'
 hostName='{hostName}'
 
 modifiedPath="${PWD/////\\}"
-cat ./nginx.conf | sed "s|"$absoulteRootPath"|"$PWD"|g" | sed "s|"$applicationPort"|"$port"|g" | sed "s|"$hostName"|"$host"|g" > /etc/nginx/conf.d/$configName".conf"
+cat /etc/vag/nginx.conf | sed "s|"$absoulteRootPath"|"$PWD"|g" | sed "s|"$applicationPort"|"$port"|g" | sed "s|"$hostName"|"$host"|g" > /etc/nginx/conf.d/$configName".conf"
 service php7.2-fpm restart 
 nginx -s reload
 urlPath="http://localhost:"$port"/"

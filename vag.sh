@@ -46,7 +46,7 @@ fi
 if appExist add-apt-repository ; then
     echo "add-apt-repository is installed"
 else
-    installNginx    
+    installSoftwarePropertiesCommon    
 fi
 
 if appExist nginx ; then

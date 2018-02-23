@@ -24,6 +24,10 @@ function installPHP () {
     apt-get install php7.2-fpm php7.2-cli -y
 }
 
+function installSoftwarePropertiesCommon () {
+     apt-get install software-properties-common
+}
+
 defaultPort=8000
 defaultHost='localhost'
 if [ -z ${1+x} ]; then 
@@ -37,6 +41,12 @@ if [ -z ${2+x} ]; then
 else 
     portIsNumber $2
     port=$2 
+fi
+
+if appExist add-apt-repository ; then
+    echo "add-apt-repository is installed"
+else
+    installNginx    
 fi
 
 if appExist nginx ; then

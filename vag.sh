@@ -22,7 +22,7 @@ function installPHP () {
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C
     add-apt-repository ppa:ondrej/php
     apt-get update
-    apt-get install php7.2-fpm php7.2-cli -y
+    apt-get install php7.2-fpm php7.2-cli php-7.2-zip php-7.2-mbstring php-7.2-dom -y
 }
 
 function installSoftwarePropertiesCommon () {
@@ -83,8 +83,6 @@ if (( $(ps -ef | grep -v grep | grep nginx | wc -l) > 0 )); then
 else
     /usr/sbin/nginx
 fi
-
-nginx -s reload
 urlPath="http://localhost:"$port"/"
 python -mwebbrowser $urlPath
 

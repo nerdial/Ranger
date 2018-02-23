@@ -19,13 +19,14 @@ function installNginx () {
 }
 
 function installPHP () {
+    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C
     add-apt-repository ppa:ondrej/php
     apt-get update
     apt-get install php7.2-fpm php7.2-cli -y
 }
 
 function installSoftwarePropertiesCommon () {
-     apt-get install software-properties-common
+     apt-get install software-properties-common -y
 }
 
 defaultPort=8000
@@ -70,7 +71,19 @@ hostName='{hostName}'
 
 modifiedPath="${PWD/////\\}"
 cat /etc/vag/nginx.conf | sed "s|"$absoulteRootPath"|"$PWD"|g" | sed "s|"$applicationPort"|"$port"|g" | sed "s|"$hostName"|"$host"|g" > /etc/nginx/conf.d/$configName".conf"
-service php7.2-fpm restart 
+
+if (( $(ps -ef | grep -v grep | grep php7.2-fpm | wc -l) > 0 )); then
+    /usr/sbin/service php7.2-fpm restart
+else
+    /usr/sbin/service php7.2-fpm start
+fi
+
+if (( $(ps -ef | grep -v grep | grep nginx | wc -l) > 0 )); then
+    /usr/sbin/nginx -s reload
+else
+    /usr/sbin/nginx
+fi
+
 nginx -s reload
 urlPath="http://localhost:"$port"/"
 python -mwebbrowser $urlPath

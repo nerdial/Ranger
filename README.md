@@ -40,3 +40,15 @@ $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/nerdial/Vagabond/master/
 
 ## Available Options
 
+available options you may use with Vag command:
+
+| --option  | -shortcut | Description  |
+| --------- |:---------:|:------------|
+| --help   | **-h**   | shows the help|
+| --server | **-s**   | defines which host project should run on, default=localhost|
+| --port   | **-p**   | application port  ,default=8000|
+| --default| **-d**   | uses php built-in webserver instead|
+| --root   | **-r**   | set application root ,default=current directory|
+| --version| **-v**   | shows the version of vagabond|
+| --ini    | **-i**   | specify .ini file for php-fpm or php built-in server ,default=looks for php.ini in the current directory,if could not find any, i will use default file located in /etc/vag/php.ini|
+

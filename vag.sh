@@ -4,10 +4,10 @@ vagabondVersion=0.1.0
 showHelp () {
     echo 'List of options you may run :'
     echo '----------------------------------------------------------------------------------'
-    echo '      -h or --help       shows the help manual'
+    echo '      -h or --help       shows the help'
     echo '      -s or --server     defines which host project should run on, default=localhost'
     echo '      -p or --port       application port  ,default=8000'
-    echo '      -d or --default    use php built-in webserver instead'
+    echo '      -d or --default    uses php built-in webserver instead'
     echo '      -r or --root       set application root ,default=current directory'
     echo '      -v or --version    shows the version of vagabond'
     echo '      -i or --ini        specify .ini file for php-fpm or php built-in server ,default=looks for php.ini in the current directory,'  

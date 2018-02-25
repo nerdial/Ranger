@@ -17,7 +17,7 @@ $ vag
 
 ## Other Examples
 ```sh
-$ vag -h localhost -p 9000  
+$ vag -s localhost -p 9000  
 ```
 ```sh
 $ vag -p 9000  
@@ -36,4 +36,7 @@ $ sh -c "$(wget https://raw.githubusercontent.com/nerdial/Vagabond/master/instal
 ```sh
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/nerdial/Vagabond/master/install.sh)"  
 ```
+
+
+## Available Options
 

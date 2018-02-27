@@ -6,12 +6,12 @@ showHelp () {
     echo '----------------------------------------------------------------------------------'
     echo '      -h or --help       shows the help'
     echo '      -s or --server     defines which host project should run on, default=localhost'
-    echo '      -p or --port       application port  ,default=8000'
+    echo '      -p or --port       specifies application port  ,default=8000'
     echo '      -d or --default    uses php built-in webserver instead'
-    echo '      -r or --root       set application root ,default=current directory'
+    echo '      -r or --root       sets application public directory ,default=current directory'
     echo '      -v or --version    shows the version of vagabond'
-    echo '      -i or --ini        specify .ini file for php-fpm or php built-in server ,default=looks for php.ini in the current directory,'  
-    echo '                         if could not find any, i will use default file located in /etc/vag/php.ini'                                
+    echo '      -i or --ini        specifies .ini file for php-fpm or php built-in server ,default=looks for php.ini in the current directory,'  
+    echo '                         if could not find any, it will use default file located in /etc/vag/php.ini'                                
     echo '----------------------------------------------------------------------------------'
 }
 
@@ -22,10 +22,6 @@ portIsNumber () {
     else
         return 1
     fi
-}
-
-appExist () {
-    type "$1" &> /dev/null ;
 }
 
 installNginx () {
@@ -93,22 +89,19 @@ while :; do
     shift
 done
 
-if appExist add-apt-repository ; then
-    #echo "add-apt-repository is installed"
-else
-    installSoftwarePropertiesCommon    
+if  ! type add-apt-repository &> /dev/null  
+then
+    installSoftwarePropertiesCommon
 fi
 
-if appExist nginx ; then
-    #echo "nginx is installed"
-else
-    installNginx    
+if  ! type nginx &> /dev/null  
+then
+    installNginx
 fi
 
-if appExist php-fpm7.2 ; then
-    #echo "php-fpm is installed"
-else
-    installPHP    
+if  ! type php-fpm7.2 &> /dev/null  
+then
+    installPHP
 fi
 
 arrIN=(${PWD//// })

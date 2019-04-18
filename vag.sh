@@ -114,10 +114,10 @@ hostName='{hostName}'
 modifiedPath="${PWD/////\\}"
 cat /etc/vag/nginx.conf | sed "s|"$absoulteRootPath"|"$PWD"|g" | sed "s|"$applicationPort"|"$defaultPort"|g" | sed "s|"$hostName"|"$defaultHost"|g" > /etc/nginx/conf.d/$configName".conf"
 
-if (( $(ps -ef | grep -v grep | grep php7.2-fpm | wc -l) > 0 )); then
-    /usr/sbin/service php7.2-fpm restart
+if (( $(ps -ef | grep -v grep | grep php7.3-fpm | wc -l) > 0 )); then
+    /usr/sbin/service php7.3-fpm restart
 else
-    /usr/sbin/service php7.2-fpm start
+    /usr/sbin/service php7.3-fpm start
 fi
 
 if (( $(ps -ef | grep -v grep | grep nginx | wc -l) > 0 )); then

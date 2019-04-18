@@ -89,20 +89,20 @@ while :; do
     shift
 done
 
-if  ! type add-apt-repository &> /dev/null  
-then
-    installSoftwarePropertiesCommon
-fi
+# if  ! type add-apt-repository &> /dev/null  
+# then
+#     installSoftwarePropertiesCommon
+# fi
 
-if  ! type nginx &> /dev/null  
-then
-    installNginx
-fi
+# if  ! type nginx &> /dev/null  
+# then
+#     installNginx
+# fi
 
-if  ! type php-fpm7.2 &> /dev/null  
-then
-    installPHP
-fi
+# if  ! type php-fpm7.2 &> /dev/null  
+# then
+#     installPHP
+# fi
 
 arrIN=(${PWD//// })
 configName=${arrIN[-1]}
